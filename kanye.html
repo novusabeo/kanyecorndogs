@@ -50,33 +50,12 @@
     <div id="snow">
   
 </div>
- 
-    <script>
-      var tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          events: {
-                onStateChange: 'onPlayerStateChange'
-          }
-        });
-      }
 
-      function onPlayerStateChange(event) {
-        if (event.data===YT.PlayerState.ENDED) {
-                event.target.cueVideoById(event.target.getVideoData().video_id);
-        }
-      }
-
-</script>
+<iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/250-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>    
+ <audio id="player" autoplay loop>
+    <source src="https://raw.githubusercontent.com/novusabeo/kanyecorndogs/master/yang.mp3" type="audio/mp3">
+</audio>   
     
-    
-    
- <iframe width="0" height="0" src="https://www.youtube.com/embed/6Is7tdnnbYI?autoplay=1&loop=1&playlist=6Is7tdnnbYI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="player"></iframe>
- 
 </body>
  
 </html>
